@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<blockquote>
+<h3>都市一覧</h3>
+</blockquote>
+<table>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>population</th>
+<th>date_mod</th>
+</tr>
+{% for city in cities %}
+        <tr>
+        <td>{{ city.id}}</td>
+        <td>{{ city.name}}</td>
+        <td>{{ city.population }}
+        <td>{{ city.date_mod }}
+        </tr>
+{% endfor %}
+</table>
+{% endblock %}
